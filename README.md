@@ -39,13 +39,13 @@ Inside the surf zone, dissipation by depth induced wave breaking usually dominat
 ### Wave breaking parameterizations
 
 <img src="https://render.githubusercontent.com/render/math?math=D_w"> must be approximated from a parameterization for depth induced wave breaking. SimpleWaves1D currently implements the following parameterizations for depth induced breaking:
-* JB78: Battjes and Janssen, 1978
-* TG83: Thornton and Guza, 1983
-* W88: Whitford, 1988
-* B98: Baldock et al., 1998
-* JB07:Janssen and Battjes, 2007
-* CK02: Chawla and Kirby, 2002
-* FA12 (Filipot and Ardhuin, 2012)
+* JB78: [Battjes and Janssen, 1978](http://ascelibrary.org/doi/10.1061/9780872621909.034)
+* TG83: [Thornton and Guza, 1983](http://doi.wiley.com/10.1029/JC088iC10p05925)
+* W88: [Whitford, 1988](http://hdl.handle.net/10945/23148)
+* B98: [Baldock et al., 1998](https://linkinghub.elsevier.com/retrieve/pii/S0378383998000179)
+* JB07:[Janssen and Battjes, 2007](https://linkinghub.elsevier.com/retrieve/pii/S0378383907000580)
+* CK02: [Chawla and Kirby, 2002](http://doi.wiley.com/10.1029/2001JC001042)
+* FA12: [Filipot and Ardhuin, 2012](http://doi.wiley.com/10.1029/2011JC007784)
 
 
 more documentation coming soon ...
