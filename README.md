@@ -15,7 +15,7 @@ The functions `k2w.m` and `w2k.m` are taken from the [WAFO toolbox](http://www.m
 ## Governing equations
 
 ### Wave energy flux balance
-For a stationary, alongshore uniform situation and in the absence of currents, the spatial distribution of the wave energy is conserved along a cross-shore transect. 
+For a stationary, alongshore uniform situation and in the absence of currents, the flux of wave energy is conserved along a cross-shore transect. 
 Energy input by wind and frictional losses at the bottom can be neglected if the area of interest is small. 
 
 The cross-shore wave energy flux balance then reads:
