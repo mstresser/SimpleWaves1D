@@ -14,6 +14,8 @@ The functions `k2w.m` and `w2k.m` are taken from the [WAFO toolbox](http://www.m
 
 ## Governing equations
 
+*this part is based on chapter 2.4 of my [dissertation](https://nbn-resolving.org/urn:nbn:de:gbv:8-mods-2020-00246-7)*
+
 ### Wave energy flux balance
 For a stationary, alongshore uniform situation and in the absence of currents, the flux of wave energy is conserved along a cross-shore transect. 
 Energy input by wind and frictional losses at the bottom can be neglected if the area of interest is small. 
@@ -26,7 +28,7 @@ The cross-shore wave energy flux balance then simply reads:
 
 The wave group velocity can be estimated using linear wave theory as  
 
-<img src="https://render.githubusercontent.com/render/math?math=c_g = c_p \ \left(0.5 \ {plus}\  \frac{k \ d}{\sinh(2 \ k \ d )}\right)">,
+<img src="https://render.githubusercontent.com/render/math?math=c_g = c_p \ \left(0.5 \ %2B \  \frac{k \ d}{\sinh(2 \ k \ d )}\right)">,
 
 where <img src="https://render.githubusercontent.com/render/math?math=c_p = \frac{\omega}{k}"> is the wave phase velocity of the waves. <img src="https://render.githubusercontent.com/render/math?math=\omega = 2 \pi /T"> and <img src="https://render.githubusercontent.com/render/math?math=k = 2 \pi /L"> are the radial frequency and wavenumber of the waves with the characteristic wave length L and period T, which are, at a given water depth d, linked through the surface gravity wave dispersion relationship
 <img src="https://render.githubusercontent.com/render/math?math=\omega^2 = g k \ \tanh(kd) "> .
@@ -75,7 +77,7 @@ The former (eq. 20 in the original paper and here denoted TG83eq20) reads
 
 <img src="https://render.githubusercontent.com/render/math?math=W(H) = \left( \frac{H_{rms}}{\gamma d}\right)^n  \leq 1 "> , where the exponent n=4 was found to fit best, and the latter (eq. 21 in TG83 denoted here as TG83eq21)
 
-<img src="https://render.githubusercontent.com/render/math?math=W(H) = \left( \frac{H_{rms}}{\gamma d}\right)^n \left[ 1 - \exp\left( - \left( \frac{H}{\gamma d} \right)^2 \right) \right] \leq 1 "> ,   
+<img src="https://render.githubusercontent.com/render/math?math=W(H) = \left( \frac{H_{rms}}{\gamma d}\right)^n \left[ 1 - \exp \left( - \left( \frac{H}{\gamma d} \right)^2 \right) \right] \leq 1 "> ,   
 with n=2.
 Again following the bore analogy, the average rate of energy dissipation is then given by
 
@@ -85,7 +87,7 @@ The two different probability distributions yield the total dissipation
 
 <img src="https://render.githubusercontent.com/render/math?math=D_{TGeq20} = \frac{3 \sqrt{\pi}}{16} \rho g \frac{B^3 \ f_{rep}}{\gamma^4 \ d^5} H_{rms}^7"> ,and similarly
 
-<img src="https://render.githubusercontent.com/render/math?math=D_{TGeq21} = \frac{3 \sqrt{\pi}}{16} \rho g B^3 f_{rep} \frac{H_{rms}^5}{\gamma^2 d^5} \left[ 1 - \frac{1}{\left(1 + \left( \frac{H_{rms}}{\gamma d}\right)^2 \right) ^{2.5}}\right]">.
+<img src="https://render.githubusercontent.com/render/math?math=D_{TGeq21} = \frac{3 \sqrt{\pi}}{16} \rho g B^3 f_{rep} \frac{H_{rms}^5}{\gamma^2 d^5} \left[ 1 - \frac{1}{\left(1 %2B \left( \frac{H_{rms}}{\gamma d}\right)^2 \right) ^{2.5}}\right]">.
 
 Note that the scaling factor <img src="https://render.githubusercontent.com/render/math?math=\gamma"> influences the shape of the weighting function <img src="https://render.githubusercontent.com/render/math?math=W(H)">. 
 This is not directly similar to the function of the breaker parameter which is used within the breaker criterion to estimate maximum height of a breaking wave. 
@@ -94,7 +96,7 @@ However, a change of <img src="https://render.githubusercontent.com/render/math?
 #### W88
 An alternative weighting function 
 
-<img src="https://render.githubusercontent.com/render/math?math=W(H) = \left[ 1 + \tanh \left( 8 \left( \frac{H_{rms}}{\gamma d} - 0.99 \right) \right) \right] \left[ 1 -\exp \left( - \left( \frac{H}{\gamma d}\right)^2 \right) \right]">
+<img src="https://render.githubusercontent.com/render/math?math=W(H) = \left[ 1 %2B \tanh \left( 8 \left( \frac{H_{rms}}{\gamma d} - 0.99 \right) \right) \right] \left[ 1 -\exp \left( - \left( \frac{H}{\gamma d}\right)^2 \right) \right]">
 
 to be used within the TG83 model was proposed by Whitford (1988) and will be referred hereafter as W88.
 This equation is again of purely empirical nature and has no specific physical motivation, but the fact that its better suitable to match additional field data from the SUPERDUCK experiment on a barred beach.
@@ -118,14 +120,46 @@ This is much more practical compared to the transcendental relationship for <img
 However, there is again no physical justification for this way of describing the breaking probability.
 An integration of the bore-like dissipation rate for a single wave over all breaking wave heights yields the average dissipation rate per unit surface area 
 
-<img src="https://render.githubusercontent.com/render/math?math=D_{JB} = \frac{3 \sqrt{\pi}}{16}\  B \  f_{rep} \ \rho g \ \frac{H_{rms}^3}{d} \left[ 1 + \frac{4}{3 \sqrt{\pi}} \left( R^3 + \frac{3}{2} R \right) \exp \left[ R^2 \right] - \text{erf} (R) \right]"> ,
+<img src="https://render.githubusercontent.com/render/math?math=D_{JB} = \frac{3 \sqrt{\pi}}{16}\  B \  f_{rep} \ \rho g \ \frac{H_{rms}^3}{d} \left[ 1 %2B \frac{4}{3 \sqrt{\pi}} \left( R^3 %2B \frac{3}{2} R \right) \exp \left[ R^2 \right] - \text{erf} (R) \right]"> ,
 
 where <img src="https://render.githubusercontent.com/render/math?math=R=H_b/H_{rms}"> and <img src="https://render.githubusercontent.com/render/math?math=H_b = \gamma d">.
 Similar to B98, also JB07 use an empirical relationship for the breaker parameter  
 
-<img src="https://render.githubusercontent.com/render/math?math=\gamma = \frac{H_b}{d} = 0.39 + 0.56 \ \tanh(33  \ S_0)"> ,
+<img src="https://render.githubusercontent.com/render/math?math=\gamma = \frac{H_b}{d} = 0.39 %2B 0.56 \ \tanh(33  \ S_0)"> ,
 
 which depends on the offshore wave steepness <img src="https://render.githubusercontent.com/render/math?math=S_0 =(H_{rms} / L)_{\text{offshore}}">, and is a slight modification of the expression proposed by Battjes (1985). 
+
+#### CK02
+Chawla & Kirby (2002) studied current induced wave breaking at blocking points and show that the bore analogy can also applies to breaking waves in deep water if the vertical length scale (that in shallow water is governed by the water depth) is exchanged by an alternative scaling.
+Thus, they propose 
+
+<img src="https://render.githubusercontent.com/render/math?math=D_{ck} = \frac{B}{8\pi} \ \rho g \ k \ H^3  \sqrt{\frac{gk}{\tanh(kd)}}">  
+
+to substitute the dissipation rate per wave.
+They also propose a slightly different weighting function
+
+![image](https://user-images.githubusercontent.com/59920332/119250883-62685480-bba3-11eb-847a-6d09d533bc11.png)
+
+to be used to compute the probability distribution of breaking waves. 
+This better matched the current induced breaking probability in deep water as observed in the laboratory.
+However, in the free model parameters after calibrating there model using the observations were <img src="https://render.githubusercontent.com/render/math?math=B=0.1"> and <img src="https://render.githubusercontent.com/render/math?math=\gamma=0.6">, which is significantly different from the values used in shallow water studies.
+
+#### FA12
+Motivated by the findings of CK02, Filipot & Ardhuin (2012) propose a formulation for the dissipation rate of a breaking wave that is applicable to both, deep and shallow water breaking waves. They add a hyperbolic tangent term to the CK02 formulation, which makes wave breaking more severe in shallow water (by increasing the scaling factor B). The dissipation rate after FA12 (per unit area) is defined as
+
+![image](https://user-images.githubusercontent.com/59920332/119250898-7a3fd880-bba3-11eb-99ab-512eff4d9028.png) .
+
+The subscript of the calibration parameter <img src="https://render.githubusercontent.com/render/math?math=B_{dw}"> indicates that the deep water value should be used here (which was 0.1 in CK02). In the study of FA12, <img src="https://render.githubusercontent.com/render/math?math=B_{dw}=0.185"> provided the best fit to field observations.     
+This description for the dissipation rate of a single wave is used by FA12 together with the wave breaking probability formulation of Filipot et al. (2010) to develop a unified spectral parameterization for wave breaking, that is valid from deep to shallow water and matches a variety of available field observations.
+Note that the FA12 formulation is explicitly meant to be used within spectral wave models. Therefore the original formulation is formulated for different wave scales that could be used to asses the spectral distribution of the dissipation of wave energy. 
+The reader is referred to the original paper for a description. 
+Within the present thesis, a slightly modified version of the FA12 model is used in oder to apply the model to bulk formulation of the sea state (in terms of <img src="https://render.githubusercontent.com/render/math?math=H_{rms}$ and a representative frequency $f_{rep}$"> ).
+
+The weighting function for the FA12 model to derive the breaking wave height probability distribution is defined as
+
+![image](https://user-images.githubusercontent.com/59920332/119250904-8deb3f00-bba3-11eb-91a7-da3b1811650b.png) ,
+
+where <img src="https://render.githubusercontent.com/render/math?math=\beta_r = k_{rep} H_{rms} / \tanh(k_{rep} d)"> and  <img src="https://render.githubusercontent.com/render/math?math=\beta = k_{rep} H / \tanh(k_{rep} d)">. The representative wave number <img src="https://render.githubusercontent.com/render/math?math=k_{rep}"> to describe the bulk sea state  characteristics is found from the representative frequency <img src="https://render.githubusercontent.com/render/math?math=f_{rep}"> applying linear wave theory. <img src="https://render.githubusercontent.com/render/math?math=\tilde{\beta}"> is a calibration parameter to scale the breaking probability. A value of <img src="https://render.githubusercontent.com/render/math?math=\tilde{\beta}=0.42"> yielded good results.
 
 
 
