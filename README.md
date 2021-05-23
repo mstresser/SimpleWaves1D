@@ -91,5 +91,42 @@ Note that the scaling factor <img src="https://render.githubusercontent.com/rend
 This is not directly similar to the function of the breaker parameter which is used within the breaker criterion to estimate maximum height of a breaking wave. 
 However, a change of <img src="https://render.githubusercontent.com/render/math?math=\gamma"> within TG83 or in BJ78 results in the same effect, i.e. a change in the estimated probability of breaking. 
 
+#### W88
+An alternative weighting function 
+
+<img src="https://render.githubusercontent.com/render/math?math=W(H) = \left[ 1 + \tanh \left( 8 \left( \frac{H_{rms}}{\gamma d} - 0.99 \right) \right) \right] \left[ 1 -\exp \left( - \left( \frac{H}{\gamma d}\right)^2 \right) \right]">
+
+to be used within the TG83 model was proposed by Whitford (1988) and will be referred hereafter as W88.
+This equation is again of purely empirical nature and has no specific physical motivation, but the fact that its better suitable to match additional field data from the SUPERDUCK experiment on a barred beach.
+
+#### B98 / JB07
+
+Baldock et al. (1998) proposed a more simplistic approximation for the wave breaking probability which was also adopted within the model of Janssen & Battjes (2007). 
+The JB07 parametrization is congruent with the model of B98, except for the fact that the <img src="https://render.githubusercontent.com/render/math?math=H^3/d"> dependency is retained,  instead of substituting it by <img src="https://render.githubusercontent.com/render/math?math=H^2"> as it was done by B98 who followed the assumption of BJ78, that the wave height of a breaking is approximately equal to the water depth. The same modification was coincidently also reported by Alsina & Baldock (2007) in the same year.
+
+The JB07 parametrization assumes (similar to TG83) that the wave height distribution in both, breaking and non-breaking conditions always follows a Rayleigh distribution.
+However, they propose a more simplistic way for describing <img src="https://render.githubusercontent.com/render/math?math=P_b(H)">, assuming that all waves exceeding a critical wave height $H_b$ are breaking, but different to BJ78 the breaking waves are not considered to be of the same height <img src="https://render.githubusercontent.com/render/math?math=H_b">, but can be also smaller.
+The fraction of breaking waves is then given by  
+
+<img src="https://render.githubusercontent.com/render/math?math=Q_b =  \int_{0}^{\infty} P_b(H) dH = \int_{H_b}^{\infty} P_r(H) dH">
+
+which can be solved analytically yielding
+
+<img src="https://render.githubusercontent.com/render/math?math=Q_b = \exp{\left( { -\left( \frac{H_b}{H_{rms}} \right) ^2} \right)}"> .
+
+This is much more practical compared to the transcendental relationship for <img src="https://render.githubusercontent.com/render/math?math=Q_b"> within the BJ78 parameterization.
+However, there is again no physical justification for this way of describing the breaking probability.
+An integration of the bore-like dissipation rate for a single wave over all breaking wave heights yields the average dissipation rate per unit surface area 
+
+<img src="https://render.githubusercontent.com/render/math?math=D_{JB} = \frac{3 \sqrt{\pi}}{16}\  B \  f_{rep} \ \rho g \ \frac{H_{rms}^3}{d} \left[ 1 + \frac{4}{3 \sqrt{\pi}} \left( R^3 + \frac{3}{2} R \right) \exp \left[ R^2 \right] - \text{erf} (R) \right]"> ,
+
+where <img src="https://render.githubusercontent.com/render/math?math=R=H_b/H_{rms}"> and <img src="https://render.githubusercontent.com/render/math?math=H_b = \gamma d">.
+Similar to B98, also JB07 use an empirical relationship for the breaker parameter  
+
+<img src="https://render.githubusercontent.com/render/math?math=\gamma = \frac{H_b}{d} = 0.39 + 0.56 \ \tanh(33  \ S_0)"> ,
+
+which depends on the offshore wave steepness <img src="https://render.githubusercontent.com/render/math?math=S_0 =(H_{rms} / L)_{\text{offshore}}">, and is a slight modification of the expression proposed by Battjes (1985). 
+
+
 
 more documentation coming soon ...
