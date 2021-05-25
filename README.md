@@ -41,21 +41,21 @@ where <img src="https://render.githubusercontent.com/render/math?math=c_p = \fra
 
 ### Roller energy flux balance
 
-Svendsen (1984) showed that the surface roller, i.e. the detached aerated water mater mass at the front face of a breaking wave, transports a certain amount of mass and momentum and therefore it must be considered within the nearshore momentum balance.     
+[Svendsen (1984)](https://linkinghub.elsevier.com/retrieve/pii/0378383984900280) showed that the surface roller, i.e. the detached aerated water mater mass at the front face of a breaking wave, transports a certain amount of mass and momentum and therefore it must be considered within the nearshore momentum balance.     
 This can incorporated into nearshore energy balance by solving a second coupled balance equation for the flux of roller energy 
 
 <img src="https://render.githubusercontent.com/render/math?math=\frac{\partial F_{r}}{\partial x} =  D_w - D_{\tau}"> .
 
 The roller energy flux <img src="https://render.githubusercontent.com/render/math?math=F_r = E_r \ c_p"> represents the transport of energy stored within the roller <img src="https://render.githubusercontent.com/render/math?math=E_r"> by the breaking wave with the characteristic phase velocity <img src="https://render.githubusercontent.com/render/math?math=c_p">.
 Roller energy is generated when wave energy is removed from the waves by breaking hence <img src="https://render.githubusercontent.com/render/math?math=D_w"> is a source of roller energy.
-The dissipation of roller energy <img src="https://render.githubusercontent.com/render/math?math=D_\tau = \overline{\tau} c_p"> equals the work done by the mean Reynolds stress <img src="https://render.githubusercontent.com/render/math?math=\overline{\tau}">  at the boundary between the roller and the underlying water body and depends on the the geometric properties of the roller and the propagation speed of the wave (Duncan, 1981).
-In order to close the roller flux balance, the roller's geometrical quantities can be related to the roller energy (Deigaard & Fredsøe, 1989; Nairn et al., 1990) which yields for the roller dissipation 
+The dissipation of roller energy <img src="https://render.githubusercontent.com/render/math?math=D_\tau = \overline{\tau} c_p"> equals the work done by the mean Reynolds stress <img src="https://render.githubusercontent.com/render/math?math=\overline{\tau}">  at the boundary between the roller and the underlying water body and depends on the the geometric properties of the roller and the propagation speed of the wave ([Duncan, 1981](https://royalsocietypublishing.org/doi/10.1098/rspa.1981.0127)).
+In order to close the roller flux balance, the roller's geometrical quantities can be related to the roller energy ([Deigaard & Fredsøe, 1989](https://linkinghub.elsevier.com/retrieve/pii/0378383989900422); [Nairn et al., 1990](https://doi.org/10.1061/9780872627765.007)) which yields for the roller dissipation 
 
 <img src="https://render.githubusercontent.com/render/math?math=D_\tau  = \frac{2 E_r g \beta_s}{c_p}"> ,
 
 where <img src="https://render.githubusercontent.com/render/math?math=\beta_s"> is a calibration coefficient related to the slope of the breaking wave front.   
 
-An inclusion of roller effects into the nearshore momentum balance brings significant improvements in modeling the wave driven circulation in the nearshore (Lippmann et al., 1996).
+An inclusion of roller effects into the nearshore momentum balance brings significant improvements in modeling the wave driven circulation in the nearshore ([Lippmann et al., 1996](https://linkinghub.elsevier.com/retrieve/pii/0378383995000364)).
 
 ### Wave breaking parameterizations
 
@@ -69,7 +69,7 @@ An inclusion of roller effects into the nearshore momentum balance brings signif
 * FA12: [Filipot and Ardhuin, 2012](http://doi.wiley.com/10.1029/2011JC007784)
 
 #### BJ78 
-Battjes & Janssen (1978) assume that the maximum wave height of a breaking wave <img src="https://render.githubusercontent.com/render/math?math=H_b"> is defined by the modified Miche-type breaker criterion 
+[Battjes & Janssen (1978)](http://ascelibrary.org/doi/10.1061/9780872621909.034) assume that the maximum wave height of a breaking wave <img src="https://render.githubusercontent.com/render/math?math=H_b"> is defined by the modified Miche-type breaker criterion 
 
 <img src="https://render.githubusercontent.com/render/math?math=H_b \simeq \frac{0.88}{k} \ \tanh \left( \frac{\gamma k d }{0.88} \right)">
 
@@ -86,7 +86,7 @@ The total dissipation is computed as
 where <img src="https://render.githubusercontent.com/render/math?math=f_{rep}"> is a frequency that represents the avarage characteristics of the wave field.
 
 #### TG83
-Thornton and Guza (1983) found from field measurements of surf zone waves, 
+[Thornton and Guza (1983)](http://doi.wiley.com/10.1029/JC088iC10p05925) found from field measurements of surf zone waves, 
 that the individual wave heights are not always prescribed by the critical height <img src="https://render.githubusercontent.com/render/math?math=H_b"> as it was assumed in BJ78. 
 Their measurements showed, that troughout the entire surf zone the distribution of wave heights (breaking and non-breaking) is reasonably well described by the Rayleigh distribution
 
@@ -128,12 +128,12 @@ An alternative weighting function
 
 <img src="https://render.githubusercontent.com/render/math?math=W(H) = \left[ 1 %2B \tanh \left( 8 \left( \frac{H_{rms}}{\gamma d} - 0.99 \right) \right) \right] \left[ 1 -\exp \left( - \left( \frac{H}{\gamma d}\right)^2 \right) \right]">
 
-to be used within the TG83 model was proposed by Whitford (1988) and will be referred hereafter as W88.
+to be used within the TG83 model was proposed by [Whitford (1988)](http://hdl.handle.net/10945/23148) and will be referred hereafter as W88.
 This equation is again of purely empirical nature and has no specific physical motivation, but the fact that its better suitable to match additional field data from the SUPERDUCK experiment on a barred beach.
 
 #### B98 / JB07
 
-Baldock et al. (1998) proposed a more simplistic approximation for the wave breaking probability which was also adopted within the model of Janssen & Battjes (2007). 
+[Baldock et al. (1998)](https://linkinghub.elsevier.com/retrieve/pii/S0378383998000179) proposed a more simplistic approximation for the wave breaking probability which was also adopted within the model of [Janssen & Battjes (2007)](https://linkinghub.elsevier.com/retrieve/pii/S0378383907000580). 
 The JB07 parametrization is congruent with the model of B98, except for the fact that the <img src="https://render.githubusercontent.com/render/math?math=H^3/d"> dependency is retained,  instead of substituting it by <img src="https://render.githubusercontent.com/render/math?math=H^2"> as it was done by B98 who followed the assumption of BJ78, that the wave height of a breaking is approximately equal to the water depth. The same modification was coincidently also reported by Alsina & Baldock (2007) in the same year.
 
 The JB07 parametrization assumes (similar to TG83) that the wave height distribution in both, breaking and non-breaking conditions always follows a Rayleigh distribution.
@@ -157,10 +157,10 @@ Similar to B98, also JB07 use an empirical relationship for the breaker paramete
 
 <img src="https://render.githubusercontent.com/render/math?math=\gamma = \frac{H_b}{d} = 0.39 %2B 0.56 \ \tanh(33  \ S_0)"> ,
 
-which depends on the offshore wave steepness <img src="https://render.githubusercontent.com/render/math?math=S_0 =(H_{rms} / L)_{\text{offshore}}">, and is a slight modification of the expression proposed by Battjes (1985). 
+which depends on the offshore wave steepness <img src="https://render.githubusercontent.com/render/math?math=S_0 =(H_{rms} / L)_{\text{offshore}}">, and is a slight modification of the expression proposed by [Battjes (1985)](http://doi.wiley.com/10.1029/JC090iC05p09159). 
 
 #### CK02
-Chawla & Kirby (2002) studied current induced wave breaking at blocking points and show that the bore analogy can also applies to breaking waves in deep water if the vertical length scale (that in shallow water is governed by the water depth) is exchanged by an alternative scaling.
+[Chawla & Kirby (2002)](http://doi.wiley.com/10.1029/2001JC001042) studied current induced wave breaking at blocking points and show that the bore analogy can also applies to breaking waves in deep water if the vertical length scale (that in shallow water is governed by the water depth) is exchanged by an alternative scaling.
 Thus, they propose 
 
 <img src="https://render.githubusercontent.com/render/math?math=D_{ck} = \frac{B}{8\pi} \ \rho g \ k \ H^3  \sqrt{\frac{gk}{\tanh(kd)}}">  
@@ -175,12 +175,12 @@ This better matched the current induced breaking probability in deep water as ob
 However, in the free model parameters after calibrating there model using the observations were <img src="https://render.githubusercontent.com/render/math?math=B=0.1"> and <img src="https://render.githubusercontent.com/render/math?math=\gamma=0.6">, which is significantly different from the values used in shallow water studies.
 
 #### FA12
-Motivated by the findings of CK02, Filipot & Ardhuin (2012) propose a formulation for the dissipation rate of a breaking wave that is applicable to both, deep and shallow water breaking waves. They add a hyperbolic tangent term to the CK02 formulation, which makes wave breaking more severe in shallow water (by increasing the scaling factor B). The dissipation rate after FA12 (per unit area) is defined as
+Motivated by the findings of CK02, [Filipot & Ardhuin (2012)](http://doi.wiley.com/10.1029/2011JC007784) propose a formulation for the dissipation rate of a breaking wave that is applicable to both, deep and shallow water breaking waves. They add a hyperbolic tangent term to the CK02 formulation, which makes wave breaking more severe in shallow water (by increasing the scaling factor B). The dissipation rate after FA12 (per unit area) is defined as
 
 ![image](https://user-images.githubusercontent.com/59920332/119250898-7a3fd880-bba3-11eb-99ab-512eff4d9028.png) .
 
 The subscript of the calibration parameter <img src="https://render.githubusercontent.com/render/math?math=B_{dw}"> indicates that the deep water value should be used here (which was 0.1 in CK02). In the study of FA12, <img src="https://render.githubusercontent.com/render/math?math=B_{dw}=0.185"> provided the best fit to field observations.     
-This description for the dissipation rate of a single wave is used by FA12 together with the wave breaking probability formulation of Filipot et al. (2010) to develop a unified spectral parameterization for wave breaking, that is valid from deep to shallow water and matches a variety of available field observations.
+This description for the dissipation rate of a single wave is used by FA12 together with the wave breaking probability formulation of [Filipot et al. (2010)](http://doi.wiley.com/10.1029/2009JC005448) to develop a unified spectral parameterization for wave breaking, that is valid from deep to shallow water and matches a variety of available field observations.
 Note that the FA12 formulation is explicitly meant to be used within spectral wave models. Therefore the original formulation is formulated for different wave scales that could be used to asses the spectral distribution of the dissipation of wave energy. 
 The reader is referred to the original paper for a description. 
 Within the present thesis, a slightly modified version of the FA12 model is used in oder to apply the model to bulk formulation of the sea state (in terms of <img src="https://render.githubusercontent.com/render/math?math=H_{rms}$ and a representative frequency $f_{rep}$"> ).
