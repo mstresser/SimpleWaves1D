@@ -1,4 +1,4 @@
-%% main program SIMPLEWAVE1D
+%% main program SIMPLEWAVES1D
 %
 %
 % Written by: Michael Stresser, 11/1/2019

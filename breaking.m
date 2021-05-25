@@ -32,7 +32,7 @@ g=9.81;
 
 
 w = 2*pi/T_rep;
-k = w2k(w,0,d);
+k = wavenum(w,d);
 
 H = 0:0.1:20;  % wave height vector to compute the Rayleigh distribution
 dH = H(2)-H(1);

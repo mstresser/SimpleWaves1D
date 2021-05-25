@@ -44,9 +44,7 @@ d(d<dmin)=dmin;
 
 %% compute wave phase and group speed
 w = 2*pi/T_rep;
-for ii = 1:length(d)
-    k(ii,1) = w2k(w,0,d(ii)); % frequency stays the same (no current)
-end
+k = wavenum(w,d); % frequency stays the same (no current)
 cp= w./k;      % calculate phase speed
 cg = cp .* (0.5 + k.*d./(sinh(2*k.*d))); % calculate group speed
 

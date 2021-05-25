@@ -8,10 +8,7 @@ The model is provided with the hope that it will be helpful for students or rese
 Use the script `main.m` to define the input parameters and run the model.
 
 ## External resources
-The realistic beach profile stored in `bathy.mat` has been extracted from the single beam bathymetry published by [Cysewski et al. 2019](https://doi.org/10.1594/PANGAEA.898407).  
-
-The functions `k2w.m` and `w2k.m` are taken from the [WAFO toolbox](http://www.maths.lth.se/matstat/wafo), which is published under the [GPL v3](http://www.gnu.org/licenses/) licence.
-
+The realistic beach profile stored in `bathy.mat` has been extracted from the single beam bathymetry published by [Cysewski et al. 2019](https://doi.org/10.1594/PANGAEA.898407). The function wavenum.m is modified from a function by Urs Neumeier: http://neumeier.perso.ch/matlab/waves.html, that is based on polynomial approximation from Hunt, J. N. 1979. “Direct Solution of Wave Dispersion Equation,” ASCE Jour. Waterw., Port, Coastal and Ocean Engr., Vol 105, pp 457-459 suggested by George Voulgaris, University of South Carolina 
 ## Governing equations
 
 *this part is based on chapter 2.4 of my [dissertation](https://nbn-resolving.org/urn:nbn:de:gbv:8-mods-2020-00246-7)*
