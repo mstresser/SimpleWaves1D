@@ -105,6 +105,13 @@ SWOut.cg_x = cg_x;
 SWOut.cg_y = cg_y;
 SWOut.k_x = k_x;
 SWOut.k_y = k_y;
+SWOut.theta = theta;
+SWOut.theta0 = theta0;
+SWOut.T_rep = T_rep;
+
+
+
+
 
 
 
